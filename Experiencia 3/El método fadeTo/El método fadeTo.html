@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html> 
+<head>
+<script
+src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+function cambiar(){
+    $("#div21").fadeTo("slow", 0.4);
+    
+   
+}
+
+    
+</script>
+</head>
+<body>
+    <div class="content">
+        <div class="col-1">
+        <label for="inputData">Elemento: </label>
+        <input type="text" name="inputData"/>
+        <input type="button" name="inputButton" value="Agregar"/>
+        </div>
+        <div class="col-2">
+            
+        <div id="div21" style="width:150px;height:80px;background-color:red;"><h2>Ejercicio 2 </h2> </div><br>
+        
+        <ul id="list-element">
+        <!-- Los elementos se agregan aquí-->
+        </ul>
+        </div>
+        </div>
+        <script type="text/javascript">
+        var inputData = document.querySelector('input[name=inputData]'),
+         buttonAdd = document.querySelector('input[name=inputButton]');
+        buttonAdd.addEventListener('click', cargarElemento, false);
+        
+        function cargarElemento()   {   
+            var elementData = inputData.value,
+            ulElements = document.getElementById('list-element'),
+            
+            li = document.createElement('li');
+            li.innerHTML = elementData; //Agrego el contenido de text-box
+            ulElements.appendChild(li); //Agrego "li" al div#list-element
+            inputData.value = ''; //reseteo text-box
+        }
+        
+        </script>
+   
+
+<button id="change" onclick="cambiar()">Haga clic para atenuar los cuadross </button><br><br>
+
+<div id="div1" style="width:80px;height:80px;background-color:red;"></div><br>
+
+</body> 
+</html>

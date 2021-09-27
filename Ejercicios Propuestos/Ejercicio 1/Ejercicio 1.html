@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>EJercicio 1</title>
+</head>
+<body>
+<h2 id="title"> Ejercicio 1</h2>
+<form>
+<table>
+    <td align=right>nombre del empleado:</td>
+    <td><input type="text" size=36 name="nombre"></td>
+    <tr><td align=right>direccion e-mail:</td>
+    <td><input type="text" size=36 name="direccion"></td>      
+    <tr><td align=right>puesto de trabajo :</td>
+    <td> <select id = "dropdownPuestos">
+        <option value = "Director" selected>CEO - Director Ejecutivo</option>
+        <option value = "COO">Responsable operativo</option>
+        <option value = "CSO">DResponsable de ventas </option>
+        <option value = "CMO " >Responsable de marketing</option>
+        <option value = "CHRO ">Responsable de las Personas</option>
+        <option value = "CS">Éxito del cliente  </option>
+        <option value = "CFO ">Responsable Financiero </option>
+     </select></td>
+    </table>
+</form>
+
+<input type="reset" value="Borrar"> 
+
+<button onclick="Ejecutar()">Enviar</button>
+    
+<script type="text/javascript">
+    function Ejecutar(){
+        var aux,result;
+        Tex= "Se envio Correctamente";
+        alert(Tex);
+        aux = "-1";
+        while ( aux < "0" || aux > "12" ){
+            a=prompt("Ingrese Horas trabajadas", "");
+            aux = parseInt(a);
+        }
+        b="200";
+        result = parseInt(a) * parseInt(b);     
+        result += " Soles";
+        alert(result); 
+    }
+</script>
+
+</body> 
+
+<style>
+    #title {
+        padding: 5px;
+        text-align: center;
+        background-color: #24ECC5;
+    }
+
+</style>
+
+</html>
